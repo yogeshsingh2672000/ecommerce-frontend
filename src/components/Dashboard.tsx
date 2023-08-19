@@ -23,6 +23,7 @@ function Dashboard() {
       {products &&
         products.map((obj: any) => (
           <Card
+            key={obj.id}
             id={obj.id}
             title={obj.product_name}
             desc={obj.product_desc}
