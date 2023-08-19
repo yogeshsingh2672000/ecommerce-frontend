@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="bg-[#4D3C77]">
       <div className="max-w-screen-xl flex mx-auto p-4">
         <Link to="/" className="flex items-center">
-          <img src="/logo.png" className="h-8 mr-3" alt="Flowbite Logo" />
+          <img src="/logo.png" className="h-8 mr-3" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             eCommerce
           </span>
