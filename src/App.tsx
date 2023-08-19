@@ -1,12 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Dashboard from "./components/Dashboard";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoPage from "./pages/NoPage";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <div className='text-[100px]'>Welcome</div>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          {/* <Route index element={<Home />} /> */}
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
