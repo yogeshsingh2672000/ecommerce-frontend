@@ -16,7 +16,7 @@ function Card(props: CardProps) {
       <img
         className="w-full rounded-[30px] hover:scale-105 transition-all ease-in-out shadow-xl"
         src={image}
-        alt="Sunset in the mountains"
+        alt="img"
       />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
@@ -26,6 +26,21 @@ function Card(props: CardProps) {
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
           {category}
         </span>
+      </div>
+      <div className="px-6 pt-4 pb-2">
+        <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-bold text-gray-700 mr-2 mb-2">
+          ₹{(parseFloat(price.replace("$", "")) * 10).toFixed(2)}
+        </span>
+        <span className="inline-block line-through bg-yellow-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">
+          ₹
+          {(
+            parseFloat(price.replace("$", "")) * 10 +
+            parseFloat(price.replace("$", "")) * 1.5
+          ).toFixed(2)}
+        </span>
+        <button className="w-full my-2 h-[50px] border rounded py-[4px] px-2 text-center bg-[#A084E8] text-white mr-2 mb-2">
+          View more
+        </button>
       </div>
     </div>
   );
