@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getData } from "../hooks/fetchProduct";
 import Card from "../library/Card";
 
-function Dashboard() {
+function Home() {
   const [products, setProducts] = useState<any>(null);
 
   useEffect(() => {
@@ -36,4 +36,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Home;

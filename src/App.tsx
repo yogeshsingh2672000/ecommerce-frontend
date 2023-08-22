@@ -1,21 +1,21 @@
 import React from "react";
 import "./App.css";
-import Dashboard from "./components/Dashboard";
-import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import NoPage from "./pages/NoPage";
 import Contact from "./pages/Contact";
+import Layout from "./Layout/Layout";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          {/* <Route index element={<Home />} /> */}
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
