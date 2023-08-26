@@ -12,7 +12,7 @@ interface CardProps {
 function Card(props: CardProps) {
   const { id, title, desc, image, category, price } = props;
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg h-full w-full hover:scale-105 transition-all ease-in-out">
+    <div className="bg-[#031123] text-white card_hover max-w-sm rounded-xl overflow-hidden shadow-lg h-full w-full hover:scale-105 transition-all ease-in-out">
       <img
         className="w-full h-[200px] rounded-[30px] hover:scale-105 transition-all ease-in-out shadow-xl"
         src={image}
@@ -20,10 +20,10 @@ function Card(props: CardProps) {
       />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base h-[60px]">{desc}</p>
+        <p className="text-gray-300 text-base h-[60px]">{desc}</p>
       </div>
       <div className="px-6 pt-4 pb-2">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">
           {category}
         </span>
       </div>
@@ -38,7 +38,7 @@ function Card(props: CardProps) {
             parseFloat(price.replace("$", "")) * 1.5
           ).toFixed(2)}
         </span>
-        <button className="w-full my-2 h-[50px] border rounded py-[4px] px-2 text-center bg-[#A084E8] text-white mr-2 mb-2">
+        <button className="w-full my-2 h-[50px] rounded py-[4px] px-2 text-center bg-[#A084E8] text-white mr-2 mb-2">
           View more
         </button>
       </div>
