@@ -12,7 +12,7 @@ interface CardProps {
 function Card(props: CardProps) {
   const { id, title, desc, image, category, price } = props;
   return (
-    <div className="bg-[#031123] text-white card_hover max-w-sm rounded-xl overflow-hidden shadow-lg h-full w-full hover:scale-105 transition-all ease-in-out">
+    <div className="bg-[#03112380] text-white card_hover max-w-sm rounded-xl overflow-hidden shadow-lg h-full w-full hover:scale-105 transition-all ease-in-out">
       <img
         className="w-full h-[200px] rounded-[30px] hover:scale-105 transition-all ease-in-out shadow-xl"
         src={image}
